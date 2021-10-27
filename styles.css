@@ -1,0 +1,178 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+main {
+  width: 700px;
+  text-align: center;
+}
+
+.logo {
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 25px 0 10px;
+  color: var(--very-dark-blue);
+}
+
+h1 span {
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.main-text p {
+  color: var(--very-dark-blue);
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+
+.user-form {
+  position: relative;
+}
+
+#user-email {
+  width: 420px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid var(--pale-blue);
+  padding: 20px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+  color: var(--gray);
+}
+
+#user-email::placeholder {
+  color: var(--pale-blue);
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 300;
+}
+
+#user-email:focus {
+  outline: none;
+  border: 2px solid var(--pale-blue);
+  opacity: 1;
+}
+
+.error-msg {
+  display: none;
+  color: var(--light-red);
+  font-size: 13px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+}
+
+.notify-me {
+  width: 180px;
+  height: 45px;
+  border-radius: 30px;
+  border: 0;
+  background-color: var(--blue);
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px hsla(223, 87%, 63%, 0.8);
+}
+
+.notify-me:hover {
+  background-color: hsla(223, 87%, 63%, 0.8);
+}
+
+.illustration-img {
+  padding-top: 70px;
+  width: 650px;
+}
+
+footer {
+  padding-top: 85px;
+  font-size: 15px;
+  color: var(--gray);
+}
+
+.icon {
+  margin: 0 20px;
+  color: var(--blue);
+}
+
+.icon:hover {
+  color: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+footer p {
+  padding: 20px 0;
+}
+
+@media (max-width: 710px) {
+  main {
+    width: 400px;
+  }
+
+  .logo {
+    width: 70px;
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    padding-bottom: 15px;
+  }
+
+  .main-text p {
+    font-size: 16.5px;
+  }
+
+  .illustration-img {
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  #user-email {
+    width: 87%;
+    margin-bottom: 15px;
+  }
+
+  .error-msg {
+    top: 50px;
+    left: 90px;
+  }
+
+  .notify-me {
+    width: 87%;
+  }
+
+  .icon {
+    margin: 0 15px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
